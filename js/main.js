@@ -186,29 +186,36 @@
 
 	var counter = function() {
 		
-		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
+		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint(function (direction) {
 
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
+			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+				
+				// Only animate when this element is in focus
+				const $currentElement = $(this.element);
+		
+				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+				
+				// Select numbers within the focused section
+				$currentElement.find('.number').each(function () {
 					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
+						num = $this.data('number'); // Read the data-number attribute
+					console.log(num);
 					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
+						{
+							number: num,
+							numberStep: comma_separator_number_step,
+						},
+						7000 // Duration of the animation in milliseconds
 					);
 				});
-				
+		
+				// Add the class to prevent re-triggering
+				$currentElement.addClass('ftco-animated');
 			}
-
-		} , { offset: '95%' } );
-
+		
+		}, { offset: '95%' });
 	}
-	counter();
+	counter();		
 
 
 	var contentWayPoint = function() {
