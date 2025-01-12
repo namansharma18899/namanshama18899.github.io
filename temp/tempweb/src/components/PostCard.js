@@ -3,7 +3,7 @@ import React from "react";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="max-w-4xl max-h-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+    <div className="max-w-4xl max-h-5xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
       {/* Image Section */}
       <div className="md:w-1/3">
         <img
@@ -71,10 +71,18 @@ const PostCard = () => {
       source: "https://github.com/namansharma18899/lets-type",
     },
     {
+      image: "/projects/compiler.png",
+      title: "STC",
+      description: "Super tiny compiler",
+      tags: ["Pyton"],
+      demo: "#",
+      source: "https://github.com/namansharma18899/super-tiny-compiler",
+    },
+    {
       image: "/projects/cefd.png",
       title: "CEFD",
       description: "Compression Engine for Dummies...",
-      tags: ["Python"],
+      tags: ["Pyton"],
       demo: "#",
       source: "https://github.com/namansharma18899/CEFD",
     },

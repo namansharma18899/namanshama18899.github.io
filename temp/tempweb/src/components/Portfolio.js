@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AnimatedText from './aboutme';
+import TerminalProfile from './terminal';
 import Footer from './Footer';
 import PostCard from './PostCard';
 
@@ -67,10 +69,14 @@ const Portfolio = () => {
 
                 {/* Introduction */}
                 <div className="flex">
-                    <div
+                    <AnimatedText/>
+                    {/* {!showContent ? <></> : 
+                        <AnimatedText/>
+                    } */}
+                    {/* <div
                         className={`space-y-6 transition-opacity duration-500 mb-16 text-left ${showContent ? 'opacity-100' : 'opacity-0'
                             }`}
-                        style={{ marginRight: '8rem' }} /* Align to the `>` character */
+                        style={{ marginRight: '8rem' }}
                     >
                         <p className="text-gray-500 text-lg">
                             I am a Software Developer currently working at{' '}
@@ -90,9 +96,9 @@ const Portfolio = () => {
                             >
                                 call
                             </a>{' '}
-                           with me. 
+                            with me.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
 
 
@@ -115,7 +121,6 @@ const Portfolio = () => {
                             <span className="text-yellow-300">"Pune, Maharashtra 🇮🇳"</span>
                         </div>
 
-                        {/* Contact Info */}
                         <div className="text-gray-200">
                             <span className="text-indigo-300">&gt; Naman.contactInfo</span>
                             <br />
@@ -147,35 +152,21 @@ const Portfolio = () => {
                             <span className="text-green-300">]</span>
                         </div>
 
-                        {/* Resume */}
                         <div className="text-gray-200">
                             <span className="text-indigo-300">&gt; Naman.resume</span>
                             <br />
                             <a
                                 href="https://drive.google.com/file/d/1XlocFRteJkarm31GHHBr66u1LWCrmo2v/view?usp=sharing"
-                                // target="https://drive.google.com/file/d/1XlocFRteJkarm31GHHBr66u1LWCrmo2v/view?usp=sharing"
                                 rel="noopener noreferrer"
                                 className="text-cyan-300 hover:text-cyan-400 transition-colors"
                             >
                                 "NamanSharmaResume-2025.pdf"
                             </a>
                         </div>
-
-                        {/* Interests */}
                         <div className="text-gray-200">
                             <span className="text-indigo-300">&gt; Naman.interests</span>
                             <br />
-                            {/* <a 
-                href="https://drive.google.com/file/d/1XlocFRteJkarm31GHHBr66u1LWCrmo2v/view?usp=sharing" 
-                // target="https://drive.google.com/file/d/1XlocFRteJkarm31GHHBr66u1LWCrmo2v/view?usp=sharing"
-                rel="noopener noreferrer"
-                className="text-cyan-300 hover:text-cyan-400 transition-colors"
-              > */}
                             [Containerization, Openshift, GoLang, Python, GameDev, Music, Poetry, Performance Benchmarking]
-                            {/* </a> */}
-                            {/* <div className="relative">
-                <span className="absolute ml-1 text-gray-300 animate-[blink_1s_step-end_infinite]">▋</span>
-              </div> */}
                         </div>
                         <br></br>
                         <br></br>
@@ -183,9 +174,9 @@ const Portfolio = () => {
                 </div>
                 <br></br>
                 <br></br>
-                <PostCard/>
+                <PostCard />
             </div>
-            <Footer/>
+            <Footer />
         </div >
     );
 };
