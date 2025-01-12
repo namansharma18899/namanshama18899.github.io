@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Footer from './Footer';
 import PostCard from './PostCard';
 
 const Portfolio = () => {
@@ -54,9 +55,6 @@ const Portfolio = () => {
                 </ul>
             </nav>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
             <div className="max-w-5xl pt-32 px-8" style={{ marginLeft: '13rem' }}>
                 {/* Console Header */}
                 <div className="font-mono text-7xl text-indigo-400 font-light mb-24 flex items-start">
@@ -70,7 +68,7 @@ const Portfolio = () => {
                 {/* Introduction */}
                 <div className="flex">
                     <div
-                        className={`space-y-4 transition-opacity duration-500 mb-16 text-left ${showContent ? 'opacity-100' : 'opacity-0'
+                        className={`space-y-6 transition-opacity duration-500 mb-16 text-left ${showContent ? 'opacity-100' : 'opacity-0'
                             }`}
                         style={{ marginRight: '8rem' }} /* Align to the `>` character */
                     >
@@ -85,14 +83,14 @@ const Portfolio = () => {
                             . My passion is building scalable, robust and performant applications, playing guitar & travelling...
                         </p>
                         <p className="text-gray-500 text-lg">
-                            Check out my{' '}
+                            Book a {' '}
                             <a
                                 href="#projects"
                                 className="text-indigo-400 hover:text-indigo-500 transition-colors font-bold"
                             >
-                                side-projects
+                                call
                             </a>{' '}
-                            below.
+                           with me. 
                         </p>
                     </div>
                 </div>
@@ -187,6 +185,7 @@ const Portfolio = () => {
                 <br></br>
                 <PostCard/>
             </div>
+            <Footer/>
         </div >
     );
 };

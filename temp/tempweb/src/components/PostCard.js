@@ -1,14 +1,16 @@
 import React from "react";
 
+
 const ProjectCard = ({ project }) => {
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+    <div className="max-w-4xl max-h-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
       {/* Image Section */}
       <div className="md:w-1/3">
         <img
           src={project.image}
           alt={project.title}
-          className="object-cover w-full h-full"
+          // className="object-cover w-full h-full"
+          className="w-full h-auto object-cover"
         />
       </div>
 
@@ -60,7 +62,7 @@ const ProjectCard = ({ project }) => {
 const PostCard = () => {
   const projects = [
     {
-      image: "https://via.placeholder.com/300x200", // Replace with actual image URLs
+      image: "/projects/letstype.svg", // Replace with actual image URLs
       title: "Lets Type",
       description:
         "Lets Type is a sleek and efficient terminal-based typing speed calculator built with Python. Elevate your typing skills and track your progress with this interactive and user-friendly tool.",
@@ -69,12 +71,12 @@ const PostCard = () => {
       source: "https://github.com/namansharma18899/lets-type",
     },
     {
-      image: "https://via.placeholder.com/300x200",
-      title: "Dharma",
-      description: "The world might not need a 1v1 arcade game in earnest but I might....",
-      tags: ["html","css"],
+      image: "/projects/cefd.png",
+      title: "CEFD",
+      description: "Compression Engine for Dummies...",
+      tags: ["Python"],
       demo: "#",
-      source: "https://github.com/namansharma18899/Dharma",
+      source: "https://github.com/namansharma18899/CEFD",
     },
   ];
 
@@ -85,7 +87,8 @@ const PostCard = () => {
       </h1>
       <div className="space-y-8">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project}>
+          </ProjectCard>
         ))}
       </div>
     </div>
