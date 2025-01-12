@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PostCard from './PostCard';
 
 const Portfolio = () => {
     const [text, setText] = useState('');
@@ -46,7 +47,7 @@ const Portfolio = () => {
                         </a>
                     </li>
                     <li>
-                        <a  href='#personal' className='hover:text-indigo-500 transition-colors'>
+                        <a href='#personal' className='hover:text-indigo-500 transition-colors'>
                             Personal Blog
                         </a>
                     </li>
@@ -55,7 +56,8 @@ const Portfolio = () => {
             <br></br>
             <br></br>
             <br></br>
-            <div className="max-w-3xl ml-40 pt-32 px-8">
+            <br></br>
+            <div className="max-w-5xl pt-32 px-8" style={{ marginLeft: '13rem' }}>
                 {/* Console Header */}
                 <div className="font-mono text-7xl text-indigo-400 font-light mb-24 flex items-start">
                     <span>&gt;&nbsp;</span>
@@ -72,10 +74,17 @@ const Portfolio = () => {
                             }`}
                         style={{ marginRight: '8rem' }} /* Align to the `>` character */
                     >
-                        <p className="text-gray-600 text-lg">
-                            I am a Java Developer currently working at Coriolis Technologies. My passion is building Scalable, Robust and performant enterprise Java applications...
+                        <p className="text-gray-500 text-lg">
+                            I am a Software Developer currently working at{' '}
+                            <a
+                                href="https://www.redhat.com/en"
+                                className="text-red-400 hover:text-indigo-500 transition-colors font-bold"
+                            >
+                                RedHat
+                            </a>{' '}
+                            . My passion is building scalable, robust and performant applications, playing guitar & travelling...
                         </p>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-500 text-lg">
                             Check out my{' '}
                             <a
                                 href="#projects"
@@ -101,6 +110,7 @@ const Portfolio = () => {
                     {/* Terminal Content */}
                     <div className="p-6 font-mono space-y-6 text-sm">
                         {/* Location */}
+                        <br></br>
                         <div className="text-gray-200">
                             <span className="text-indigo-300">&gt; Naman.currentLocation</span>
                             <br />
@@ -149,7 +159,7 @@ const Portfolio = () => {
                                 rel="noopener noreferrer"
                                 className="text-cyan-300 hover:text-cyan-400 transition-colors"
                             >
-                                "NamanSharma.pdf"
+                                "NamanSharmaResume-2025.pdf"
                             </a>
                         </div>
 
@@ -163,20 +173,19 @@ const Portfolio = () => {
                 rel="noopener noreferrer"
                 className="text-cyan-300 hover:text-cyan-400 transition-colors"
               > */}
-                            [ Music, Guitar, Coding, GoLang, Python, Performance Benchmarking ]
+                            [Containerization, Openshift, GoLang, Python, GameDev, Music, Poetry, Performance Benchmarking]
                             {/* </a> */}
                             {/* <div className="relative">
                 <span className="absolute ml-1 text-gray-300 animate-[blink_1s_step-end_infinite]">▋</span>
               </div> */}
                         </div>
-
+                        <br></br>
+                        <br></br>
                     </div>
                 </div>
-                    <div>
-                        <h1>
-                            helkjlkjl
-                        </h1>
-                    </div>
+                <br></br>
+                <br></br>
+                <PostCard/>
             </div>
         </div >
     );
